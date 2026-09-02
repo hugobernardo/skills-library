@@ -10,7 +10,7 @@ Skills are plain folders: a `SKILL.md` with instructions plus optional `referenc
 |---|---|
 | [`tam-analysis`](skills/tam-analysis) | Research, size, validate and govern a market — TAM/SAM/SOM to a skeptical-investor standard with graded evidence, explicit ranges, no double counting, and a versioned Source of Truth. Three modes: SIZE, RECONCILE, MAINTAIN. |
 | [`presentation-builder`](skills/presentation-builder) | Build any presentation — sales pitch, investor deck, board update, conference talk, training — through a staged process that settles the argument before any slide gets made. Assertion headlines, graded evidence, visible gaps instead of invented numbers. |
-| [`create-gtm-strategy`](skills/create-gtm-strategy) | Go-to-market strategy with launch plan, channels and metrics, rendered as an interactive widget. |
+| [`create-gtm-strategy`](skills/create-gtm-strategy) | Go-to-market strategy as a working document — clarify before drafting, label every claim (fact / assumption / modeled / target), audit the draft for internal contradictions, then convert it into decisions. Handles product launches and services market entry. |
 | [`create-content-plan`](skills/create-content-plan) | Content marketing strategy with pillars, editorial calendar and distribution plan. |
 | [`angle-finder`](skills/angle-finder) | Research a topic and produce the ingredients for one deep post — angle, hooks, arguments, stats, quotes, closers. Adapted from Marketing Against the Grain's Content Angle Finder. |
 | [`starter-session-audit`](skills/starter-session-audit) | End-of-session audit for Cowork workspaces that catches uncaptured corrections, preferences and decisions. |
