@@ -8,6 +8,7 @@ Skills are plain folders: a `SKILL.md` with instructions plus optional `referenc
 
 | Skill | What it does |
 |---|---|
+| [`idea-to-prd`](skills/idea-to-prd) | Run a product idea through a governed virtual product team from discovery to a decision-ready, buildable PRD—with explicit scope-target and validation choices, specialist roles, formal gates, backward loops, and independent Red Team challenge. |
 | [`tam-analysis`](skills/tam-analysis) | Research, size, validate and govern a market — TAM/SAM/SOM to a skeptical-investor standard with graded evidence, explicit ranges, no double counting, and a versioned Source of Truth. Three modes: SIZE, RECONCILE, MAINTAIN. |
 | [`presentation-builder`](skills/presentation-builder) | Build any presentation — sales pitch, investor deck, board update, conference talk, training — through a staged process that settles the argument before any slide gets made. Assertion headlines, graded evidence, visible gaps instead of invented numbers. |
 | [`create-gtm-strategy`](skills/create-gtm-strategy) | Go-to-market strategy as a working document — clarify before drafting, label every claim (fact / assumption / modeled / target), audit the draft for internal contradictions, then convert it into decisions. Handles product launches and services market entry. |

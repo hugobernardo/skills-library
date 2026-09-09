@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea to PRD"
+  short_description: "Run the governed Product OS from idea to PRD"
+  default_prompt: "Use $idea-to-prd to develop this product idea through discovery, validation, specialist reviews, and a build-ready PRD."
