@@ -1,0 +1,15 @@
+{
+  "name": "hugo-skills",
+  "owner": { "name": "Hugo Bernardo" },
+  "metadata": {
+    "description": "Personal skill library"
+  },
+  "plugins": [
+    {
+      "name": "hugo-skills",
+      "source": "./",
+      "description": "Personal skill library",
+      "strict": false
+    }
+  ]
+}
