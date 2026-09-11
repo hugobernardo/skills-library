@@ -1,0 +1,106 @@
+<!-- @dsCard group="Website" viewport="1200x780" name="Homepage" subtitle="Full recreation of westtowest.org — hero, mission, services, involvement, testimonials, team" -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>West to West — Website UI Kit</title>
+<link rel="stylesheet" href="../../styles.css"><style>body{margin:0;background:var(--cloud);font-family:var(--font-body)}*{box-sizing:border-box}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script></head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { NavBar, Footer, SponsorRow, Button, SectionHeader, NewsletterForm, ServiceCard, InvolvedCard, OfficerCard, TestimonialSlider } = window.WestToWestDesignSystem_929717;
+const A = '../../assets/';
+const icon = (paths) => <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" dangerouslySetInnerHTML={{__html:paths}}/>;
+const Container = ({children, style}) => <div style={{maxWidth:'var(--container-max)',margin:'0 auto',padding:'0 var(--sp-4)',...style}}>{children}</div>;
+const Section = ({bg, children, id}) => <section id={id} style={{background:bg,padding:'88px 0'}}>{children}</section>;
+
+function Hero() {
+  return <section style={{position:'relative',minHeight:'92vh',display:'flex',alignItems:'center',background:'var(--ink)',overflow:'hidden'}}>
+    <div style={{position:'absolute',inset:0,background:"var(--hero-scrim), url('"+A+"hero-golden-gate.jpg') center/cover no-repeat"}}></div>
+    <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)',backgroundSize:'64px 64px'}}></div>
+    <div style={{position:'absolute',right:'-60px',top:'50%',transform:'translateY(-50%)',width:'520px',height:'520px',opacity:0.07}}>
+      {[0,12.5,25].map(p=><div key={p} style={{position:'absolute',inset:p+'%',borderRadius:'50%',border:'1.5px solid var(--flag-green)'}}></div>)}
+    </div>
+    <Container style={{position:'relative',zIndex:2,width:'100%'}}>
+      <h1 style={{color:'var(--white)',fontFamily:'var(--font-display)',fontSize:'68px',lineHeight:'76px',fontWeight:700,margin:'64px 0 32px'}}>Bridging Portugal and<br/>Silicon Valley</h1>
+      <p style={{fontSize:'18px',lineHeight:'30px',color:'rgba(255,255,255,0.65)',margin:'0 0 48px',maxWidth:'620px'}}>Portuguese entrepreneurs discovered half of the world during the <em style={{color:'rgba(255,255,255,0.85)'}}>Age of Discovery.</em> Now it's time to help the world discover Portugal and its modern-day entrepreneurs.</p>
+      <div style={{display:'flex',gap:'16px',flexWrap:'wrap'}}>
+        <Button variant="primary" tone="dark" href="#involved">Join Us</Button>
+        <Button variant="outline" tone="dark" href="#services">Learn More</Button>
+      </div>
+    </Container>
+  </section>;
+}
+
+function App() {
+  const [scrolled, setScrolled] = React.useState(false);
+  React.useEffect(()=>{
+    const f = ()=>setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', f); return ()=>window.removeEventListener('scroll', f);
+  },[]);
+  const navLinks = [{label:'Mission',href:'#mission'},{label:'What We Offer',href:'#services'},{label:'Get Involved',href:'#involved'},{label:'Officers & Board',href:'#officers'}];
+  return <div>
+    <div style={{position:'fixed',top:0,left:0,right:0,zIndex:100}}><NavBar logo={A+(scrolled?'logo-black.png':'logo-white.png')} links={navLinks} ctaLabel="Subscribe" ctaHref="#newsletter" scrolled={scrolled} /></div>
+    <Hero/>
+    <Section id="mission" bg="var(--white)"><Container>
+      <div style={{textAlign:'center',maxWidth:'680px',margin:'0 auto'}}>
+        <SectionHeader eyebrow="Our Mission" title={<span>Create and support a thriving environment for Portuguese entrepreneurship in San&nbsp;Francisco.</span>} subtitle="Join us if you need help or want to help." />
+      </div>
+    </Container></Section>
+    <Section id="services" bg="var(--cloud)"><Container>
+      <SectionHeader eyebrow="What We Offer" title="How We Help Ventures Succeed" subtitle="From your first steps in the Valley to building a lasting network, we're here at every stage." />
+      <div style={{display:'grid',gridTemplateColumns:'repeat(3, 1fr)',gap:'32px'}}>
+        <ServiceCard icon={icon('<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>')} title="Landing Support">The first step is always the hardest one. We help ventures setup in Silicon Valley by giving them a better understanding of the work culture and business environment. We also help them get support with everything else from basic logistics to immigration issues.</ServiceCard>
+        <ServiceCard icon={icon('<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>')} title="Mentorship">Our list of experienced entrepreneurs and domain experts work with ventures to understand their goals and provide guidance and expertise in multiple areas. These experts offer their time because they often have a personal connection to Portugal.</ServiceCard>
+        <ServiceCard icon={icon('<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>')} title="Networking">Our network expands way beyond the Portuguese Diáspora. Ventures come to us at many different stages of development. We leverage the depth of our network to connect entrepreneurs with the right people at the right time.</ServiceCard>
+      </div>
+    </Container></Section>
+    <Section id="involved" bg="var(--white)"><Container>
+      <SectionHeader eyebrow="Get Involved" title="How You Can Participate" />
+      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'32px'}}>
+        <InvolvedCard title="Ask For Help" ctaLabel="Ask For Help →" href="https://westtowest.typeform.com/to/E8Nlyj">If you're an entrepreneur or venture looking to move to Silicon Valley, or just get mentoring and learn from our experience in Silicon Valley, please reach out and we'll get back to you with next steps.</InvolvedCard>
+        <InvolvedCard title="Offer Help" ctaLabel="Offer Help →" href="https://westtowest.typeform.com/to/UF6pDj">If you're an experienced entrepreneur or domain expert and want to get involved with top-notch entrepreneurs, please reach out to us. If there's a good fit, we'll add you to our list of experts and connect you with ventures which can use your expertise.</InvolvedCard>
+      </div>
+    </Container></Section>
+    <Section bg="var(--ink)"><Container>
+      <SectionHeader dark eyebrow="Testimonials" title="What People Say" />
+      <TestimonialSlider quotes={[
+        "I joined a great VC in the Bay Area as a Partner and this would not have happened without the introduction of West to West.",
+        "West to West team is always available to help others and to share their insights.",
+        "Navigating the US entrepreneurial ecosystem is challenging, and the West to West team can help founders more efficiently allocate their time and resources when coming to the US.",
+        "West to West is doing a phenomenal job in bridging the wide gap that exists between promising tech startups in Portugal and Silicon Valley's talent pool, influencers, and investors.",
+        "West to West's mentorship and advice was very insightful and friendly, and made us feel welcome 6,000 miles away from home."
+      ]} />
+    </Container></Section>
+    <div id="newsletter"><NewsletterForm/></div>
+    <Section id="officers" bg="var(--cloud)"><Container>
+      <SectionHeader eyebrow="Leadership" title="Officers & Board" />
+      <div style={{fontFamily:'var(--font-display)',fontSize:'20px',fontWeight:600,color:'var(--ink)',marginBottom:'24px',display:'flex',alignItems:'center',gap:'8px'}}><span style={{width:'16px',height:'2px',background:'var(--flag-green)',borderRadius:'1px'}}></span>Officers</div>
+      <div style={{display:'flex',gap:'24px',overflowX:'auto',paddingBottom:'16px'}}>
+        <OfficerCard name="Pedro Santos Vieira" company="500 Global" role="Partner" linkedin="https://www.linkedin.com/in/santosvieira" />
+        <OfficerCard name="Marco de Sá" company="Oscar Health" role="SVP, Head of Data" linkedin="https://www.linkedin.com/in/marcodesa" />
+        <OfficerCard name="Angela Costa Simões" company="Red Roof Industries" role="Founder" linkedin="https://www.linkedin.com/in/angelacostasimoes" />
+        <OfficerCard name="Vasco Henrique Morais" company="ATEL Capital Group" role="General Counsel" linkedin="#" />
+        <OfficerCard name="Rita Costa Waite" company="xAI" role="Government" linkedin="https://www.linkedin.com/in/ritacwaite/" />
+        <OfficerCard name="Bernardo de Seabra" company="Render" role="Director of Engineering" linkedin="https://www.linkedin.com/in/bseabra/" />
+      </div>
+      <div style={{fontFamily:'var(--font-display)',fontSize:'20px',fontWeight:600,color:'var(--ink)',margin:'40px 0 24px',display:'flex',alignItems:'center',gap:'8px'}}><span style={{width:'16px',height:'2px',background:'var(--flag-green)',borderRadius:'1px'}}></span>Board</div>
+      <div style={{display:'flex',gap:'24px',overflowX:'auto',paddingBottom:'16px'}}>
+        <OfficerCard name="Lino Amaral" company="Amaral Insurance & Financial Services" role="CEO" linkedin="https://www.linkedin.com/in/linoamaral/" />
+        <OfficerCard name="Torben Rankine" company="SS&C Intralinks" role="Director of Corporate Sales" linkedin="https://www.linkedin.com/in/torbenrankine/" />
+        <OfficerCard name="Joao Metelo" company="Gateway Zero" role="Founder & CEO" linkedin="#" />
+        <OfficerCard name="Nuno Mathias" company="Portugal's Ministry of Foreign Affairs" role="Ambassador" linkedin="https://www.linkedin.com/in/nuno-mathias/" />
+      </div>
+    </Container></Section>
+    <Section bg="var(--white)"><Container>
+      <SectionHeader eyebrow="Partners" title="Sponsors and Partners" />
+      <SponsorRow logos={[{src:A+'sponsors/flad.png',alt:'FLAD'},{src:A+'sponsors/portugal-ventures.png',alt:'Portugal Ventures'},{src:A+'sponsors/startup-braga.jpg',alt:'Startup Braga'},{src:A+'sponsors/sata-azores.jpg',alt:'SATA Azores Airlines'},{src:A+'sponsors/aicep.jpg',alt:'AICEP'}]} />
+    </Container></Section>
+    <Footer logo={A+'logo-white.png'} description="Creating and supporting a thriving environment for Portuguese entrepreneurship in San Francisco." columns={[
+      {title:'Explore', links:[{label:'Mission',href:'#mission'},{label:'What We Offer',href:'#services'},{label:'Officers & Board',href:'#officers'}]},
+      {title:'Get Involved', links:[{label:'Ask For Help',href:'https://westtowest.typeform.com/to/E8Nlyj'},{label:'Offer Help',href:'https://westtowest.typeform.com/to/UF6pDj'},{label:'Subscribe',href:'#newsletter'}]},
+      {title:'Partners', links:[{label:'FLAD'},{label:'Portugal Ventures'},{label:'Startup Braga'}]}
+    ]} />
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

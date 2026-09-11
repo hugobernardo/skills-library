@@ -1,0 +1,8 @@
+:root{
+/* 8pt scale */
+--sp-1:8px;--sp-2:16px;--sp-3:24px;--sp-4:32px;--sp-6:48px;--sp-8:64px;--sp-12:96px;--sp-16:128px;
+--container-max:1120px;
+--container-pad:32px;
+--section-pad:88px;
+--nav-height:72px;
+}

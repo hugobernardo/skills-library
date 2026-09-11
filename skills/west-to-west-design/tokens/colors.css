@@ -1,0 +1,40 @@
+:root{
+/* Primary */
+--ink:#0B1220;
+--dark-ocean:#0B3958;
+--cloud:#F8FAFC;
+--white:#FFFFFF;
+/* Accents */
+--flag-green:#36D0A3;
+--sky:#74B9DD;
+/* Brand mark */
+--lighthouse-red:#D05353;
+--logo-black:#333333;
+/* Neutrals */
+--slate-900:#0F172A;
+--slate-600:#475569;
+--slate-200:#E2E8F0;
+/* Hover shades */
+--dark-ocean-hover:#094270;
+--flag-green-hover:#2DBF94;
+/* Semantic aliases */
+--text-body:var(--ink);
+--text-secondary:var(--slate-600);
+--text-inverse:var(--white);
+--text-inverse-muted:rgba(255,255,255,0.65);
+--surface-page:var(--cloud);
+--surface-card:var(--white);
+--surface-dark:var(--ink);
+--surface-brand:var(--dark-ocean);
+--border-subtle:var(--slate-200);
+--border-inverse:rgba(255,255,255,0.15);
+--accent-primary:var(--flag-green);
+--link:var(--dark-ocean);
+--link-hover:var(--flag-green);
+/* Feedback */
+--success-bg:var(--flag-green);
+--success-fg:var(--ink);
+--error-bg:#FEE2E2;
+--error-fg:#991B1B;
+--error-border:#F87171;
+}

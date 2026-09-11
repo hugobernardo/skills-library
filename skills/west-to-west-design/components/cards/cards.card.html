@@ -1,0 +1,23 @@
+<!-- @dsCard group="Components" viewport="700x540" name="Cards — Service, Involved, Officer, Testimonial" -->
+<!DOCTYPE html><html><head><link rel="stylesheet" href="../../styles.css"><style>body{margin:0;background:var(--cloud);font-family:var(--font-body)}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script></head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { ServiceCard, InvolvedCard, OfficerCard, TestimonialSlider } = window.WestToWestDesignSystem_929717;
+const home = <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
+ReactDOM.createRoot(document.getElementById('root')).render(<div style={{padding:'16px',display:'grid',gap:'16px'}}>
+  <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px'}}>
+    <ServiceCard icon={home} title="Landing Support">We help ventures setup in Silicon Valley — culture, logistics, immigration.</ServiceCard>
+    <InvolvedCard title="Ask For Help" ctaLabel="Ask For Help →">If you're an entrepreneur looking to move to Silicon Valley, reach out.</InvolvedCard>
+  </div>
+  <div style={{display:'flex',gap:'16px'}}>
+    <OfficerCard name="Pedro Santos Vieira" company="500 Global" role="Partner" linkedin="#" />
+    <div style={{flex:1,background:'var(--ink)',borderRadius:'12px',padding:'20px',display:'flex',alignItems:'center'}}>
+      <TestimonialSlider quotes={["West to West team is always available to help others and to share their insights.","I joined a great VC in the Bay Area as a Partner and this would not have happened without the introduction of West to West."]} />
+    </div>
+  </div>
+</div>);
+</script></body></html>
