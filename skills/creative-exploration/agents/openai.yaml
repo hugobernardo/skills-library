@@ -1,0 +1,4 @@
+interface:
+  display_name: "Creative Exploration"
+  short_description: "Turn small seeds into distant, useful concepts"
+  default_prompt: "Use $creative-exploration to turn this seed into an interactive creative search space."
