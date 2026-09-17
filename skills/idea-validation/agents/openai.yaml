@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea Validation"
+  short_description: "Generate, pressure-test, and test ideas on real examples"
+  default_prompt: "Use $idea-validation to explore this opportunity, narrow the strongest concepts, and test the finalists against real examples."
