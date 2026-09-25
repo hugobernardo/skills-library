@@ -1,0 +1,4 @@
+interface:
+  display_name: "Red-Team Analyst"
+  short_description: "Evidence-based critique and structured debate"
+  default_prompt: "Use $red-team-analyst to stress-test this proposal, identify its most dangerous assumptions, and debate the conclusion with me."
