@@ -4,6 +4,8 @@ A library of [Agent Skills](https://agentskills.io) for marketing strategy, mark
 
 Skills are plain folders: a `SKILL.md` with instructions plus optional `references/`, `templates/` and `scripts/`. The format is an open standard, so the same folder works in Claude (claude.ai, Claude Code, Cowork) and in other agents that read `SKILL.md` (Cursor, Codex, Windsurf, Gemini CLI).
 
+For remote MCP access, start with the [skills index](SKILLS_INDEX.md): select a skill, read its `SKILL.md`, and load its required supporting files at the same commit. Retrieving instructions does not install a native skill or provide code execution.
+
 ## Skills
 
 | Skill | What it does |
@@ -18,6 +20,10 @@ Skills are plain folders: a `SKILL.md` with instructions plus optional `referenc
 | [`create-content-plan`](skills/create-content-plan) | Content marketing strategy with pillars, editorial calendar and distribution plan. |
 | [`angle-finder`](skills/angle-finder) | Research a topic and produce the ingredients for one deep post — angle, hooks, arguments, stats, quotes, closers. Adapted from Marketing Against the Grain's Content Angle Finder. |
 | [`starter-session-audit`](skills/starter-session-audit) | End-of-session audit for Cowork workspaces that catches uncaptured corrections, preferences and decisions. |
+| [`website-audit`](skills/website-audit) | Review SEO and AI discoverability, then produce an audit report and structured-data recommendations. Includes a document-building script. |
+| [`keep-it-simple`](skills/keep-it-simple) | Switch to simpler language for Hugo when explicitly requested, while preserving external house styles. |
+| [`prompt-optimizer`](skills/prompt-optimizer) | Create or improve one ready-to-use prompt for a concrete outcome. |
+| [`west-to-west-design`](skills/west-to-west-design) | Apply West to West branding, typography, assets and interface guidelines. |
 
 ## Install
 
@@ -26,10 +32,10 @@ Skills are plain folders: a `SKILL.md` with instructions plus optional `referenc
 **Claude Code** — copy the folder into your skills directory:
 
 ```bash
-git clone https://github.com/<you>/claude-skills.git
-cp -r claude-skills/skills/tam-analysis ~/.claude/skills/      # personal
+git clone https://github.com/hugobernardo/skills-library.git
+cp -r skills-library/skills/tam-analysis ~/.claude/skills/      # personal
 # or
-cp -r claude-skills/skills/tam-analysis .claude/skills/        # project
+cp -r skills-library/skills/tam-analysis .claude/skills/        # project
 ```
 
 Other agents: same folder, dropped into that tool's skills directory (`~/.cursor/skills/`, `~/.codex/skills/`, `.windsurf/skills/`).
