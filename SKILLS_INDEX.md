@@ -25,6 +25,7 @@ This is a discovery index for the tracked skills in this repository. Each linked
 | `idea-to-prd` | Take a product idea through governed discovery and review into a buildable PRD. | [SKILL.md](skills/idea-to-prd/SKILL.md) |
 | `idea-validation` | Generate and validate interactive marketing utility concepts, then rank a defensible shortlist. | [SKILL.md](skills/idea-validation/SKILL.md) |
 | `keep-it-simple` | Use simpler language for Hugo when he explicitly asks; preserve external house styles. | [SKILL.md](skills/keep-it-simple/SKILL.md) |
+| `new-brand-creation` | Create a new product or business brand, from positioning and naming through visual identity and implementation handoff. | [SKILL.md](skills/new-brand-creation/SKILL.md) |
 | `presentation-builder` | Develop a presentation argument and narrative before creating slides. | [SKILL.md](skills/presentation-builder/SKILL.md) |
 | `prompt-optimizer` | Create or improve a ready-to-use prompt for a concrete outcome. | [SKILL.md](skills/prompt-optimizer/SKILL.md) |
 | `red-team-analyst` | Challenge assumptions and evidence, then debate findings one question at a time. | [SKILL.md](skills/red-team-analyst/SKILL.md) |
@@ -35,6 +36,7 @@ This is a discovery index for the tracked skills in this repository. Each linked
 
 ## Capability notes
 
+- `new-brand-creation` uses supporting references for exploration/convergence and implementation handoff; load the relevant reference before that phase.
 - `tam-analysis` and `idea-to-prd` require supporting reference files. Loading their main instruction file alone is insufficient.
 - `website-audit` includes a document-building script. Reading its source through MCP does not execute it or create a document.
 - `starter-session-audit` depends on the current workspace's instruction and memory files, which may be inaccessible from a phone chat.

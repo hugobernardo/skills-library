@@ -11,6 +11,7 @@ For remote MCP access, start with the [skills index](SKILLS_INDEX.md): select a 
 | Skill | What it does |
 |---|---|
 | [`creative-exploration`](skills/creative-exploration) | Turn almost any seed into distant but relevant creative territory through human-first capture, interactive exploration lanes, anti-anchoring, proposition-level deduplication, equal finalist development, and staged convergence. |
+| [`new-brand-creation`](skills/new-brand-creation) | Create a new product or business brand through interactive positioning, naming, visual identity, design systems, and implementation-ready handoffs. |
 | [`idea-validation`](skills/idea-validation) | Generate interactive marketing concepts, pressure-test them for originality, operability and distribution, then run finalists against public examples before re-ranking the strongest bets and next tests. |
 | [`idea-to-prd`](skills/idea-to-prd) | Run a product idea through a governed virtual product team from discovery to a decision-ready, buildable PRD—with explicit scope-target and validation choices, specialist roles, formal gates, backward loops, and independent Red Team challenge. |
 | [`red-team-analyst`](skills/red-team-analyst) | Stress-test reports, plans, ideas, and work with evidence-based challenge, falsification tests, and a structured follow-up debate. |
